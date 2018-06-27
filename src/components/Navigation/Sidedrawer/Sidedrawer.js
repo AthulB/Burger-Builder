@@ -3,7 +3,7 @@ import classes from './Sidedrawer.css';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Logo from '../../Logo/Logo';
 import Backdrop from '../../UI/BackDrop/Backdrop';
-import Aux from '../../../hoc/Aux';
+import Auxilliary from '../../../hoc/Auxilliary';
 
 const sidedrawer = (props) => {
     let acquiredClasses=[classes.Sidedrawer,classes.Open]
@@ -11,7 +11,7 @@ const sidedrawer = (props) => {
         acquiredClasses = [classes.Sidedrawer,classes.Closed]
     }
     return (
-        <Aux>
+        <Auxilliary>
             <Backdrop show={props.open} clicked={props.closed}/>
             <div className={acquiredClasses.join(' ')}>
             <div className={classes.Logo}>
@@ -21,7 +21,7 @@ const sidedrawer = (props) => {
                     <NavigationItems />
                 </nav>
             </div>
-        </Aux>
+        </Auxilliary>
         
     )
 }
